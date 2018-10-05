@@ -1,5 +1,6 @@
 var userControler = {};
 var config = require('../../config/config');
+var common = require('../../config/common');
 var response = config.response;
 
 var userModel = require('./userModel');
@@ -18,7 +19,8 @@ userControler.createUser = ((req, res, next) => {
         }).catch(function (err) {
             response.status = false;
             response.data = [];
-            response.message = err;
+            response.message = "Erro occure";
+            common.logError(response.function,req.body,err);
             res.send(response);
         });
 });
