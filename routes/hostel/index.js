@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var user  =require('./user/userControler');
+var user = require('./user/userControler');
 
 
 router.get('/', function (req, res, next) {
@@ -10,6 +10,7 @@ router.get('/', function (req, res, next) {
     });
 });
 
-router.get('/create_user',user.createUser);
+router.post('/create_user', user.createUser);
+router.post('/user_details', user.userDetails);
 
 module.exports = router;
