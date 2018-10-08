@@ -21,6 +21,7 @@ config.database = {
 config.message = {
     success: "Success",
     userCreate: "User created successfully.",
+    userUpdate: "User details updated successfully.",
     userCreateErr: "An error occure, please try again later.",
     usernameExist : "Username is already exist.",
     emailExist : "Email ID is already exist."

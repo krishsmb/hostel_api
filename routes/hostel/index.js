@@ -10,7 +10,7 @@ router.get('/', function (req, res, next) {
     });
 });
 
-router.post('/create_user', user.createUser);
+router.post('/create_update_user', user.createUpdateUser);
 router.post('/user_details', user.userDetails);
 
 module.exports = router;

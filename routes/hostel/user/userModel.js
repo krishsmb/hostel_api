@@ -48,6 +48,18 @@ userModel.createUser = function (params) {
     });
 };
 
+userModel.updateUser = function (params) {
+    return new Promise((resolve, reject) => {
+        let con = {key : "user_id", value : params.user_id};
+        database.updateSingle("h_user_master", params,con).then((result) => {
+            resolve(result);
+        }).catch(function(err) {
+            reject(err);
+        });
+
+    });
+};
+
 userModel.userDetails = function (params) {
     return new Promise((resolve, reject) => {
         let data = {
