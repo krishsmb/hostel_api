@@ -7,13 +7,14 @@
 var app = require('../app');
 var debug = require('debug')('hostel:server');
 var http = require('http');
+var config = require('../routes/config/config');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
+var port = normalizePort(config.port || '3000');
+app.set('port', config.port);
 
 /**
  * Create HTTP server.

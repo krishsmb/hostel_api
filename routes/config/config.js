@@ -1,5 +1,8 @@
 var config = {};
 
+//Set port number
+config.port = 3000;
+
 config.response = {
     status: '',
     function: '',
